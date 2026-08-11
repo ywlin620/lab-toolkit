@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buffer Preparation | Lab Toolkit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Buffer Preparation</h1>
+        <p>Build a custom laboratory buffer from available stock solutions.</p>
+    </header>
+
+    <main>
+
+        <a href="index.html">← Back to Lab Toolkit</a>
+
+        <div class="buffer-workspace">
+
+            <!-- Step 1 -->
+            <section class="buffer-panel">
+
+                <h2>Step 1</h2>
+                <h3>Select components</h3>
+
+                <label>
+                    <input type="checkbox" name="reagent" value="Tris-HCl">
+                    Tris-HCl
+                </label>
+
+                <label>
+                    <input type="checkbox" name="reagent" value="NaCl">
+                    NaCl
+                </label>
+
+                <label>
+                    <input type="checkbox" name="reagent" value="Imidazole">
+                    Imidazole
+                </label>
+
+                <label>
+                    <input type="checkbox" name="reagent" value="Glycerol">
+                    Glycerol
+                </label>
+
+                <label>
+                    <input type="checkbox" name="reagent" value="EDTA">
+                    EDTA
+                </label>
+
+            </section>
+
+
+            <!-- Step 2 -->
+            <section class="buffer-panel">
+
+                <h2>Step 2</h2>
+                <h3>Set concentrations</h3>
+
+                <div id="concentration-inputs">
+
+                    <p class="placeholder">
+                        Select components in Step 1.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Step 3 -->
+            <section class="buffer-panel">
+
+                <h2>Step 3</h2>
+                <h3>Final volume</h3>
+
+                <label>
+                    Final volume
+                    <input
+                        type="number"
+                        id="final-volume"
+                        value="500"
+                        min="1"
+                    >
+                    mL
+                </label>
+
+                <button id="calculate-buffer">
+                    Calculate
+                </button>
+
+            </section>
+
+        </div>
+
+
+        <!-- Result -->
+
+        <section class="buffer-result-section">
+
+            <h2>Preparation</h2>
+
+            <div id="buffer-result">
+                Your preparation instructions will appear here.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

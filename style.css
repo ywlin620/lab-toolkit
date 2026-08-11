@@ -32,7 +32,7 @@ main {
 }
 
 
-/* ---------- Tool Cards ---------- */
+/* ---------- Tool Cards on Home Page ---------- */
 
 .tool-container {
     display: flex;
@@ -76,69 +76,81 @@ button:disabled {
 }
 
 
-/* ---------- Hidden Elements ---------- */
+/* ---------- Links ---------- */
 
-.hidden {
-    display: none;
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
-/* ---------- Buffer Section ---------- */
+/* ---------- Buffer Workspace ---------- */
 
-#buffer-section {
-    margin-top: 40px;
+.buffer-workspace {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+/* ---------- Buffer Panels ---------- */
+
+.buffer-panel {
     background-color: white;
-    padding: 40px;
+    padding: 25px;
     border-radius: 12px;
 }
 
-#buffer-section h2 {
-    text-align: center;
+.buffer-panel h2 {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #888;
 }
 
-
-/* ---------- Steps ---------- */
-
-.buffer-step {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.buffer-step h3 {
+.buffer-panel h3 {
+    margin-top: 5px;
     margin-bottom: 25px;
 }
 
 
 /* ---------- Step 1 ---------- */
 
-#step-1 label {
+.buffer-panel > label {
     display: block;
     margin: 14px 0;
-    cursor: pointer;
 }
 
-#step-1 input[type="checkbox"] {
+.buffer-panel input[type="checkbox"] {
     margin-right: 8px;
+    cursor: pointer;
 }
 
 
 /* ---------- Step 2 ---------- */
 
+.placeholder {
+    color: #888;
+}
+
 .concentration-row {
-    margin-bottom: 18px;
-    padding: 18px;
+    margin-bottom: 15px;
+    padding: 16px;
     background-color: #f5f7f8;
     border-radius: 10px;
 }
 
 .concentration-row strong {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .concentration-row p {
-    margin: 8px 0 12px 0;
+    margin: 7px 0 12px;
     color: #555;
 }
 
@@ -149,54 +161,46 @@ button:disabled {
 }
 
 .concentration-row input {
-    width: 90px;
+    width: 85px;
     padding: 8px;
 }
 
 
 /* ---------- Step 3 ---------- */
 
-#step-3 label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 #final-volume {
     width: 100px;
     padding: 8px;
+    margin: 15px 5px 20px 5px;
 }
 
-
-/* ---------- Step Navigation ---------- */
-
-.step-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-}
-
-
-/* 如果 Step 1 只有 Next，
-   讓按鈕靠右 */
-
-#step-1 .step-buttons {
-    justify-content: flex-end;
+#calculate-buffer {
+    display: block;
+    margin-top: 20px;
 }
 
 
 /* ---------- Result ---------- */
 
+.buffer-result-section {
+    margin-top: 25px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.buffer-result-section h2 {
+    margin-top: 0;
+}
+
 #buffer-result {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
     main {
         width: 90%;
@@ -210,8 +214,8 @@ button:disabled {
         width: auto;
     }
 
-    #buffer-section {
-        padding: 25px;
+    .buffer-workspace {
+        grid-template-columns: 1fr;
     }
 
     .concentration-row label {
