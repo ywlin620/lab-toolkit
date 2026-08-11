@@ -1,8 +1,5 @@
-const openBufferButton = document.getElementById("open-buffer");
-const bufferSection = document.getElementById("buffer-section");
-
 const reagents = {
-    "Tris-HCl": {
+    "Tris-HCl pH7.5": {
         stock: 1,
         stockUnit: "M",
         finalUnit: "mM"
@@ -14,8 +11,8 @@ const reagents = {
         finalUnit: "mM"
     },
 
-    "Imidazole": {
-        stock: 2,
+    "Imidazole pH7.5": {
+        stock: 1,
         stockUnit: "M",
         finalUnit: "mM"
     },
@@ -32,13 +29,6 @@ const reagents = {
         finalUnit: "mM"
     }
 };
-
-
-// Open Buffer Preparation
-openBufferButton.addEventListener("click", function () {
-    bufferSection.classList.remove("hidden");
-});
-
 
 // Step sections
 const step1 = document.getElementById("step-1");
