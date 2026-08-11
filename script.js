@@ -13,7 +13,7 @@ const reagents = {
     },
 
     "Imidazole": {
-        stock: 2,
+        stock: 1,
         stockUnit: "M",
         finalUnit: "mM"
     },
