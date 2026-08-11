@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lab Toolkit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Lab Toolkit</h1>
+        <p>Tools for everyday molecular biology experiments.</p>
+    </header>
+
+    <main>
+        <h2>Tools</h2>
+
+        <div class="tool-container">
+
+            <div class="tool-card">
+                <h3>Buffer Preparation</h3>
+                <p>Calculate reagent volumes for laboratory buffers.</p>
+                <button id="open-buffer">Open</button>
+            </div>
+
+            <div class="tool-card">
+                <h3>Protein Tools</h3>
+                <p>Calculate pI, molecular weight and extinction coefficient.</p>
+                <button disabled>Coming soon</button>
+            </div>
+
+            <div class="tool-card">
+                <h3>DNA / RNA Tools</h3>
+                <p>Sequence analysis tools for molecular biology.</p>
+                <button disabled>Coming soon</button>
+            </div>
+
+            <section id="buffer-section" class="hidden">
+
+    <h2>Buffer Preparation</h2>
+
+    <!-- Step 1 -->
+    <div id="step-1" class="buffer-step">
+
+        <h3>Step 1 — Select components</h3>
+
+        <label>
+            <input type="checkbox" name="reagent" value="Tris-HCl">
+            Tris-HCl
+        </label>
+
+        <label>
+            <input type="checkbox" name="reagent" value="NaCl">
+            NaCl
+        </label>
+
+        <label>
+            <input type="checkbox" name="reagent" value="Imidazole">
+            Imidazole
+        </label>
+
+        <label>
+            <input type="checkbox" name="reagent" value="Glycerol">
+            Glycerol
+        </label>
+
+        <label>
+            <input type="checkbox" name="reagent" value="EDTA">
+            EDTA
+        </label>
+
+        <div class="step-buttons">
+            <button id="step1-next">Next</button>
+        </div>
+
+    </div>
+
+
+        <!-- Step 2 -->
+        <div id="step-2" class="buffer-step hidden">
+
+            <h3>Step 2 — Set concentrations</h3>
+
+            <div id="concentration-inputs"></div>
+
+            <div class="step-buttons">
+                <button id="step2-back">Back</button>
+                <button id="step2-next">Next</button>
+            </div>
+
+        </div>
+
+
+        <!-- Step 3 -->
+        <div id="step-3" class="buffer-step hidden">
+
+            <h3>Step 3 — Final volume</h3>
+
+            <label>
+                Final volume:
+                <input type="number" id="final-volume" value="500">
+                mL
+            </label>
+
+            <div class="step-buttons">
+                <button id="step3-back">Back</button>
+                <button id="calculate-buffer">Calculate</button>
+            </div>
+
+            <div id="buffer-result"></div>
+
+        </div>
+
+    </section>
+    
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
